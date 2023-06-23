@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>내 페이지</title>
+</head>
+<body>
+  <div class="nav">
+    <h1 class="header__txt"><a href="http://localhost:5500/index.html"><img src="/icon.png"></a></h1>
+  
+    <ul id="menu" style="cursor: pointer;">
+      <li><a href="https://www.tottenhamhotspur.com/kr/" target="_blank">menu</a></li>
+      <li><a href="https://nos7.com/" target="_blank">information</a></li>
+      <li><a href="http://localhost:3000/" target="_blank">comment</a></li>
+    </ul>
+  
+    <a class="bars" href="/">
+      <img src="images/bar.png" onmouseover="this.src='/images/x.png';" onmouseout="this.src='/images/bar.png';">
+    </a>
+  </div>  
+  
+  <div id="box">
+    <h1 id="head_txt">방명록</h1>
+      <ul>
+      <% for (comment of comments) { %>
+          <li id="user_comment"><%= comment.id %> <%= comment.content %></li>
+          <form action="/update/<%= comment.id %>" method="post">
+              <input type="text" name="content" id="update">
+              <input type="submit" value="수정" id="update_box">
+          </form>
+          <form action="/delete/<%= comment.id %>" method="post">
+            <input type="submit" value="삭제" id="delete_box">
+          </form><br>
+      <% } %>
+      </ul>
+      <hr>
+      <form id='create_box' action="/create" method="post">
+          <input type="text" id="lname" name="content" id="create"><br><br>
+          <input type="submit" value="등록" id="submit_box">
+        </form>
+  </div>
+</body>
+</html>

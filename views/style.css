@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box
+}
+li{
+    list-style: none;
+    color: black;
+}
+li:hover{
+    color:#FF9907;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;}
+a:hover{
+    color:#FF9907;
+}
+body{
+    background: white;
+    width: 100% - 20px;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Jeju Gothic', sans-serif;
+}
+ 
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    background: white;
+    margin: 5px;
+    border-radius: 10px;
+    border: 5px solid red;
+}
+#menu{
+    display: flex;
+}
+#menu > li {
+    font-family: 'Bree Serif';
+    font-style: normal;
+    margin-left: 15px;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+.bars{
+    display: none;
+    cursor: pointer;
+}
+
+
+#head_txt{
+    margin: 20px 5px;
+}
+
+#lname{
+    width: 300px;
+    height: 30px;
+}
+
+#submit_box{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+}
+#box{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 5px solid black;
+    padding: 20px;
+}
+#user_comment{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    
+}
+input{
+    border-radius: 3px;
+}
+
+#update_box{
+    width: 50px;
+    height: 30px;
+}
+#update{
+    width: 700px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+#delete_box{
+    width: 50px;
+    height: 30px;
+    margin-top: 5px;
+}
